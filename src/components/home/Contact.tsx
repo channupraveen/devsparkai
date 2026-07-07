@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "@/components/Reveal";
 
@@ -14,14 +15,34 @@ export default function Contact() {
   const [budget, setBudget] = useState<string | null>(null);
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const canSend = name.trim() && email.trim() && type;
+  const canSend = name.trim() && email.trim() && type && !sending;
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!canSend) return;
-    // TODO: wire up email integration (Resend / EmailJS / API route) here.
-    // Payload: { name, email, type, budget, message }
-    setSent(true);
+    setSending(true);
+    setError(false);
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name,
+          email,
+          project_type: type,
+          budget: budget ?? "not specified",
+          message: message || "—",
+        },
+        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! }
+      );
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputCls =
@@ -127,8 +148,13 @@ export default function Contact() {
                       : "bg-line/60 text-muted cursor-not-allowed"
                   }`}
                 >
-                  Send it over <span aria-hidden>→</span>
+                  {sending ? "Sending…" : "Send it over"} <span aria-hidden>→</span>
                 </motion.button>
+                {error && (
+                  <p className="mt-4 text-sm text-accent">
+                    Something went wrong — please email us directly at devsparkai.studio@gmail.com
+                  </p>
+                )}
               </Reveal>
             </motion.div>
           ) : (
