@@ -24,10 +24,6 @@ export const metadata: Metadata = {
   title: "DevSpark AI — Web & AI Studio, Hyderabad",
   description:
     "DevSpark AI is a web development and AI automation studio. We design and ship fast, handcrafted websites and intelligent products for ambitious teams.",
-  icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
-  },
 };
 
 export default function RootLayout({

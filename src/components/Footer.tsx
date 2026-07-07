@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 export default function Footer() {
@@ -21,7 +22,18 @@ export default function Footer() {
         <Reveal delay={0.15}>
           <div className="mt-16 md:mt-24 grid md:grid-cols-3 gap-8 border-t border-line pt-8 text-sm text-muted">
             <div>
-              <p className="text-ink font-medium mb-2">DevSpark AI</p>
+              <div className="flex items-center gap-2 mb-2">
+                <Image
+                  src="/logo.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="h-5 w-5 object-contain"
+                />
+                <p className="text-ink font-medium font-serif text-base">
+                  DevSpark<em className="text-accent"> AI</em>
+                </p>
+              </div>
               <p>Hyderabad, India</p>
               <p>Working worldwide</p>
             </div>

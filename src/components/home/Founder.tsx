@@ -4,8 +4,8 @@ import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
 const socials = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/YOUR_HANDLE" },
-  { label: "GitHub", href: "https://github.com/YOUR_HANDLE" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/praveen-kumar2001" },
+  { label: "GitHub", href: "https://github.com/channupraveen" },
   { label: "X", href: "https://x.com/YOUR_HANDLE" },
 ];
 

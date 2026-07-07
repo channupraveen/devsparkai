@@ -18,15 +18,18 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-paper/85 backdrop-blur-sm border-b border-line">
       <nav className="mx-auto max-w-7xl px-5 md:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center overflow-visible">
+        <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/logo.png"
-            alt="DevSpark AI"
-            width={280}
-            height={64}
-            className="h-12 md:h-14 w-auto object-contain scale-[1.6] origin-left"
+            src="/logo.svg"
+            alt="DevSpark AI logo"
+            width={36}
+            height={36}
+            className="h-6 w-6 md:h-7 md:w-7 object-contain"
             priority
           />
+          <span className="font-serif text-xl md:text-2xl tracking-tight">
+            DevSpark<em className="text-accent"> AI</em>
+          </span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-8 text-sm text-muted">
