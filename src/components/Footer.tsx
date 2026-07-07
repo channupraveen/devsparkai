@@ -39,8 +39,8 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-ink font-medium mb-2">Contact</p>
-              <a href="mailto:hello@devsparkai.com" className="link-underline block w-fit">
-                hello@devsparkai.com
+              <a href="mailto:devsparkai.studio@gmail.com" className="link-underline block w-fit">
+                devsparkai.studio@gmail.com
               </a>
             </div>
             <div className="flex md:justify-end items-end">

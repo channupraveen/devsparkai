@@ -145,8 +145,8 @@ export default function Contact() {
               </p>
               <p className="text-muted mt-6">
                 Meanwhile, feel free to reach us directly at{" "}
-                <a href="mailto:hello@devsparkai.com" className="link-underline text-ink">
-                  hello@devsparkai.com
+                <a href="mailto:devsparkai.studio@gmail.com" className="link-underline text-ink">
+                  devsparkai.studio@gmail.com
                 </a>
               </p>
             </motion.div>
