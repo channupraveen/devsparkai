@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevSparkAI — Digital Product & AI Engineering Studio
 
-## Getting Started
+**Company website for DevSparkAI, a software and AI engineering studio focused on web applications, SaaS products, automation and AI solutions.**
 
-First, run the development server:
+Website: https://devsparkai.com
+
+## What this project represents
+
+DevSparkAI is the product/agency layer behind a portfolio of software projects, including AI-powered SaaS products, business applications and automation systems.
+
+The website is designed to communicate technical capabilities while providing a professional entry point for prospective clients and collaborators.
+
+## Services
+
+- Web application development
+- SaaS product development
+- AI and LLM integrations
+- Business automation
+- Backend/API development
+- UI/UX implementation
+- Custom software solutions
+
+## Technology
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 |
+| UI | React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Icons | Lucide React |
+| UX | Lenis |
+| Contact | EmailJS |
+
+## Frontend architecture
+
+```text
+Next.js Application
+       │
+       ├── Marketing pages
+       ├── Service sections
+       ├── Portfolio / case studies
+       ├── Contact experience
+       └── Interactive UI
+              │
+              ▼
+       External services
+       └── EmailJS
+```
+
+The site is intentionally lightweight and frontend-focused. Product backends are maintained in separate repositories and services.
+
+## Why the project matters
+
+A company website is also a software product: it needs fast page delivery, responsive layouts, clear information architecture, accessible interactions and reliable lead capture.
+
+This project demonstrates the ability to take a brand and technical service offering and turn it into a polished production-oriented web experience.
+
+## Local development
+
+### Requirements
+
+- Node.js
+- npm
+
+### Install
+
+```bash
+git clone https://github.com/channupraveen/devsparkai.git
+cd devsparkai
+npm install
+```
+
+### Start
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Production build
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Lint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project role in the portfolio
 
-## Deploy on Vercel
+DevSparkAI acts as the umbrella for several engineering projects and SaaS experiments.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Selected projects include:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **AIOpsCare** — hospital operations and maintenance SaaS
+- **SwarmAI** — distributed local LLM inference and orchestration
+- **Social Hub** — AI-powered social media management SaaS
+
+The individual repositories contain deeper implementation details and architecture.
+
+## Engineering highlights
+
+- Modern Next.js + React development
+- TypeScript frontend engineering
+- Responsive and interactive UI
+- Motion design
+- Client-side lead/contact workflow
+- Product storytelling for technical audiences
+- Separation of marketing UI from backend services
+
+## Author
+
+**Praveen Kumar**
+
+GitHub: https://github.com/channupraveen
+
+## License
+
+MIT
